@@ -1,16 +1,11 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
-var Will = require('./will')
+var ReactRouter = require('react-router')
+var Routes = require('./routes')
 
 
-var Teste = React.createClass({
-  render: function(){
-    return (
-      <div>
-        <div><Will /></div>        
-      </div>
-    )
-  }
-});
 
-ReactDOM.render(<Teste />, document.getElementById('app'));
+var mountNode = document.getElementById('app')
+
+ReactDOM.render(Routes, mountNode)
+

@@ -1,10 +1,15 @@
-var browserify = require('browserify');
-var babelify = require('babelify');
-var gulp = require('gulp');
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
-var sourcemaps = require('gulp-sourcemaps');
-var util = require('gulp-util');
+var browserify  = require('browserify'),
+    babelify    = require('babelify'),
+    gulp        = require('gulp'),
+    source      = require('vinyl-source-stream'),
+    buffer      = require('vinyl-buffer'),
+    sourcemaps  = require('gulp-sourcemaps'),
+    util        = require('gulp-util'),
+    mainBowerFiles  = require('gulp-main-bower-files'),
+    filter      = require('gulp-filter'),
+    concat      = require('gulp-concat'),
+    uglify      = require('gulp-uglify');
+
 
 gulp.task('default', function () {
   var b = browserify({
@@ -23,4 +28,15 @@ gulp.task('default', function () {
       .on('error', util.log)
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist'));
+});
+
+
+gulp.task('bower-js', function(){
+   var filterJS = filter(['**/*.js']);
+  return gulp.src('./bower.json')
+    .pipe(mainBowerFiles())
+    .pipe(filterJS)
+        .pipe(concat('vendor.js'))
+        .pipe(uglify())
+    .pipe(gulp.dest('./dist'))
 });

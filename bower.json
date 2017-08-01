@@ -1,0 +1,28 @@
+{
+  "name": "fleetsystem",
+  "description": "Fleet System Mini App",
+  "main": "index.html",
+  "authors": [
+    "Will Angélico <willangelico@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "react",
+    "javascript",
+    "html5",
+    "sass",
+    "gulp"
+  ],
+  "homepage": "https://github.com/willangelico/fleetsystem",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7"
+  }
+}
