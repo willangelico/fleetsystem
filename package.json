@@ -1,0 +1,26 @@
+{
+  "name": "fleetsystem",
+  "version": "1.0.0",
+  "description": "Fleet Control Mini App",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willangelico/fleetsystem.git"
+  },
+  "keywords": [
+    "react",
+    "javascript",
+    "html5",
+    "gulp",
+    "sass"
+  ],
+  "author": "Will Angelico",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willangelico/fleetsystem/issues"
+  },
+  "homepage": "https://github.com/willangelico/fleetsystem#readme"
+}
