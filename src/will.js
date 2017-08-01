@@ -1,13 +1,13 @@
 var React = require('react')
 
-var Child = React.createClass({
+var Will = React.createClass({
   render: function(){
     return (
       <div>
-        and this is the <b>{this.props.name}</b>.
+        William Angélico     
       </div>
     )
   }
 });
 
-module.exports = Child
+module.exports = Will
